@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="Description" content="Enter your description here" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+            integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+        />
+
+        <link
+            rel="stylesheet"
+            href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+        />
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./assets/css/style.css" />
+        <title>Weather Dashboard</title>
+    </head>
+
+    <body>
+        <header>
+            <div class="jumbotron jumbotron-fluid m-0 mb-3 text-left">
+                <div>
+                    <h1 class="text-center">Weather Dashboard</h1>
+                    <h2 class="display-10 ml-4">
+                        Current Date: <br />
+                        <span class="time-display"></span>
+                    </h2>
+                </div>
+            </div>
+        </header>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-3">
+                    <!-- here we will have first column with that has input for city search and button -->
+                    <h2>Search for a City:</h2>
+                    <form>
+                        <div class="form-group">
+                            <input
+                                class="btn-block"
+                                id="cityInput"
+                            ></input>
+                            <input
+                                class="btn btn-primary btn-block mt-2"
+                                id="submitBtn"
+                                type="submit"
+                                value="Search"
+                            />
+                        </div>
+                    </form>
+                    <hr>
+                </div>
+                <div class="container-fluid col-sm-9" id="infoColumn">
+                    <!-- here we will have the currently selected city with basic weather details in a container 
+                    and below it the 5 day forcast in 5 cards per day with some basic weather details  so 
+                    we need two rows within this column, however we need to programmatically add these rows
+                    i left this column with id infoColumn so we can append as we wish later with ease-->
+                    <div class="border" id="currentInfo">
+                        <h4 id="cityName" class="m-3"></h4>
+                        <p id="currentTemp">Temp: </p>
+                        <p id="currentWind">Wind: </p>
+                        <p id="currentHumidity">Humidity: </p>
+                        <p id="currentUV">UV Index: </p>
+                    </div>
+                <!-- here we got the first row with current weather data  -->
+                    <h3 class="m-3">5 Day Forecast:</h3>
+                    <div id="cards" class="card-group">
+                        <div class="card border-secondary mb-3 border-dark" id="day1" style="width:auto;">
+                            <div class="card-header">Header</div>
+                            <div class="card-body">
+                                <h7 class="card-title">Icon</h7>
+                                <p id="currentTemp">Temp: </p>
+                                <p id="currentWind">Wind: </p>
+                                <p id="currentHumidity">Humidity: </p>
+                            </div>
+                        </div>
+                        <div class="card border-secondary mb-3 border-dark" id="day2" style="width:auto;">
+                            <div class="card-header">Header</div>
+                            <div class="card-body">
+                                <h5 class="card-title">Icon</h5>
+                                <p id="currentTemp">Temp: </p>
+                                <p id="currentWind">Wind: </p>
+                                <p id="currentHumidity">Humidity: </p>
+                            </div>
+                        </div>
+                        <div class="card border-secondary mb-3 border-dark" id="day3" style="width:auto;">
+                            <div class="card-header">Header</div>
+                            <div class="card-body">
+                                <h5 class="card-title">Icon</h5>
+                                <p id="currentTemp">Temp: </p>
+                                <p id="currentWind">Wind: </p>
+                                <p id="currentHumidity">Humidity: </p>
+                            </div>
+                        </div>
+                        <div class="card border-secondary mb-3 border-dark" id="day4" style="width:auto;">
+                            <div class="card-header">Header</div>
+                            <div class="card-body">
+                                <h5 class="card-title">Icon</h5>
+                                <p id="currentTemp">Temp: </p>
+                                <p id="currentWind">Wind: </p>
+                                <p id="currentHumidity">Humidity: </p>
+                            </div>
+                        </div>
+                        <div class="card border-secondary mb-3 border-dark" id="day5" style="width:auto;">
+                            <div class="card-header">Header</div>
+                            <div class="card-body">
+                                <h5 class="card-title">Icon</h5>
+                                <p id="currentTemp">Temp: </p>
+                                <p id="currentWind">Wind: </p>
+                                <p id="currentHumidity">Humidity: </p>
+                            </div>
+                        </div>               
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+        <script src="./assets/js/script.js"></script>
+    </body>
+</html>
