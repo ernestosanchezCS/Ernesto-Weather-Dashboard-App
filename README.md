@@ -1,4 +1,4 @@
-# Weather-Dashboard-App-Server-Side-APIs-
+# Ernesto-Weather-Dashboard-App-w/-Server-Side-APIs
 
 Third-party APIs allow developers to access their data and functionality by making requests with specific parameters to a URL. Developers are often tasked with retrieving data from another application's API and using it in the context of their own. This weather dashboard runs in the browser and features dynamically updated HTML and CSS.
 It uses the OpenWeather One Call API to retrieve weather data for cities. Saves searced cities using localStorage as its persistent data.
