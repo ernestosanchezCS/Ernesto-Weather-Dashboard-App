@@ -61,9 +61,12 @@
                             />
                         </div>
                     </form>
+                    <div class="container container-fluid block cityListed">
+                        <hr id="prevCities">
+                    </div>
                     <hr>
                 </div>
-                <div class="container-fluid col-sm-9" id="infoColumn">
+                <div class="container-fluid col-sm-9  flex-shrink w-100" id="infoColumn">
                     <!-- here we will have the currently selected city with basic weather details in a container 
                     and below it the 5 day forcast in 5 cards per day with some basic weather details  so 
                     we need two rows within this column, however we need to programmatically add these rows
@@ -77,7 +80,16 @@
                     </div>
                 <!-- here we got the first row with current weather data  -->
                     <h3 class="m-3">5 Day Forecast:</h3>
-                    <div id="cards" class="card-group">
+                    <div id="cards" class="card-group  flex-shrink">
+                        <div class="card border-secondary mb-3 border-dark" id="day0" style="width:auto;">
+                            <div class="card-header">Header</div>
+                            <div class="card-body">
+                                <h7 class="card-title">Icon</h7>
+                                <p id="currentTemp">Temp: </p>
+                                <p id="currentWind">Wind: </p>
+                                <p id="currentHumidity">Humidity: </p>
+                            </div>
+                        </div>
                         <div class="card border-secondary mb-3 border-dark" id="day1" style="width:auto;">
                             <div class="card-header">Header</div>
                             <div class="card-body">
@@ -90,7 +102,7 @@
                         <div class="card border-secondary mb-3 border-dark" id="day2" style="width:auto;">
                             <div class="card-header">Header</div>
                             <div class="card-body">
-                                <h5 class="card-title">Icon</h5>
+                                <h7 class="card-title">Icon</h7>
                                 <p id="currentTemp">Temp: </p>
                                 <p id="currentWind">Wind: </p>
                                 <p id="currentHumidity">Humidity: </p>
@@ -99,7 +111,7 @@
                         <div class="card border-secondary mb-3 border-dark" id="day3" style="width:auto;">
                             <div class="card-header">Header</div>
                             <div class="card-body">
-                                <h5 class="card-title">Icon</h5>
+                                <h7 class="card-title">Icon</h7>
                                 <p id="currentTemp">Temp: </p>
                                 <p id="currentWind">Wind: </p>
                                 <p id="currentHumidity">Humidity: </p>
@@ -108,16 +120,7 @@
                         <div class="card border-secondary mb-3 border-dark" id="day4" style="width:auto;">
                             <div class="card-header">Header</div>
                             <div class="card-body">
-                                <h5 class="card-title">Icon</h5>
-                                <p id="currentTemp">Temp: </p>
-                                <p id="currentWind">Wind: </p>
-                                <p id="currentHumidity">Humidity: </p>
-                            </div>
-                        </div>
-                        <div class="card border-secondary mb-3 border-dark" id="day5" style="width:auto;">
-                            <div class="card-header">Header</div>
-                            <div class="card-body">
-                                <h5 class="card-title">Icon</h5>
+                                <h7 class="card-title">Icon</h7>
                                 <p id="currentTemp">Temp: </p>
                                 <p id="currentWind">Wind: </p>
                                 <p id="currentHumidity">Humidity: </p>

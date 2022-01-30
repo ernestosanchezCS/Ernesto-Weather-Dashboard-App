@@ -8,12 +8,18 @@
 }
 
 .jumbotron {
+    flex: auto, auto;
     padding: 2%;
     height: 190px;
     background-image: linear-gradient(var(--primary), var(--secondary));
 }
 
+.cityListed {
+    display: inline-block;
+}
+
 .card {
+    min-width: auto;
     color: var(--light);
     background-color: var(--blue);
 }
